@@ -5,15 +5,16 @@
 // ─────────────────────────────────────────────────────────────
 
 export const profile = {
-  name: "Your Name",
-  eyebrow: "Digital Architect",
-  designation: "MERN Stack Developer",
-  tagline: "Building modern web experiences with JavaScript and React.",
-  location: "Dhaka, Bangladesh",
-  yearsExperience: "0.6",
+  name: "Abul Bashar Atiqur",
+  eyebrow: "Software Engineer",
+  designation: "CS Instructor & Software Engineer",
+  tagline:
+    "Building modern web experiences and solutions with a focus on clean code and user-centric design.",
+  location: "Naogaon, Rajshahi, Bangladesh",
+  yearsExperience: "1",
   available: true,
-  avatar: "/images/avatar.svg",
-  resumeUrl: "/resume.pdf",
+  avatar: "/images/Atiqur_Rahman_CS_instructor.jpg",
+  resumeUrl: "/Atiqur_Rahman_Resume_final.pdf",
   bio: [
     "I started my programming journey by tinkering with small HTML pages and slowly fell in love with the process of turning an idea into something people can actually click on. That curiosity eventually led me to the MERN stack, where I now spend most of my time.",
     "I enjoy building clean, user-focused web applications — the kind of work where a good UI decision and a well-structured API come together to make something feel effortless to use. I care a lot about readable code and about the small details that make an interface feel polished rather than just functional.",
@@ -22,16 +23,28 @@ export const profile = {
 };
 
 export const socials = [
-  { label: "GitHub", href: "https://github.com/yourusername", icon: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourusername", icon: "linkedin" },
-  { label: "Twitter", href: "https://twitter.com/yourusername", icon: "twitter" },
-  { label: "Facebook", href: "https://facebook.com/yourusername", icon: "facebook" },
+  { label: "GitHub", href: "https://github.com/ab-atiq", icon: "github" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/abulbasharatiq/",
+    icon: "linkedin",
+  },
+  {
+    label: "Twitter",
+    href: "https://x.com/abulbasharatiq",
+    icon: "twitter",
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/abulbasbaratiq/",
+    icon: "facebook",
+  },
 ];
 
 export const contact = {
-  email: "your.email@example.com",
-  phone: "+880 1XXXXXXXXX",
-  whatsapp: "+880 1XXXXXXXXX",
+  email: "abulbasharatiqur@gmail.com",
+  phone: "+880 1521787417",
+  whatsapp: "+880 1521787417",
 };
 
 export type SkillCategory = {
@@ -79,16 +92,29 @@ export type EducationItem = {
 
 export const education: EducationItem[] = [
   {
+    degree: "MSc in Computer Science & Engineering",
+    institution: "Begum Rokeya University, Rangpur, Bangladesh",
+    duration: "2024 — present",
+    description:
+      "Focused on web technologies, data structures, and software engineering practices. Built several academic and personal projects using the MERN stack.",
+  },
+  {
     degree: "B.Sc. in Computer Science & Engineering",
-    institution: "Your University Name",
-    duration: "2021 — 2025",
+    institution: "Begum Rokeya University, Rangpur, Bangladesh",
+    duration: "2020 — 2024",
     description:
       "Focused on web technologies, data structures, and software engineering practices. Built several academic and personal projects using the MERN stack.",
   },
   {
     degree: "Higher Secondary Certificate (HSC)",
-    institution: "Your College Name",
-    duration: "2019 — 2021",
+    institution: "Rajshahi Court College, Rajshahi, Bangladesh",
+    duration: "2017 — 2019",
+    description: "Science group.",
+  },
+  {
+    degree: "SSC (Secondary School Certificate) or Dakhil",
+    institution: "Chalkhori Narayon Dakhil Madrasha, Naogaon, Bangladesh",
+    duration: "2014 — 2016",
     description: "Science group.",
   },
 ];
