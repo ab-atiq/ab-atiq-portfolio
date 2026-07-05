@@ -146,8 +146,8 @@ export const experience: ExperienceItem[] = [
 export const nav = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/#about" },
+  { label: "Journey", href: "/#journey" },
   { label: "Skills", href: "/#skills" },
   { label: "Projects", href: "/#projects" },
-  { label: "Journey", href: "/#journey" },
   { label: "Contact", href: "/#contact" },
 ];
