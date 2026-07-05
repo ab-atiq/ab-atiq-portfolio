@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base-bg text-base-ink dark:bg-dark-bg dark:text-dark-ink font-body transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-accent/20;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full bg-accent-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-accent-dark dark:bg-accent/15 dark:text-accent-pink;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(241,85,76,0.6)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-base-border bg-transparent px-6 py-3 text-sm font-semibold text-base-ink transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent dark:border-dark-border dark:text-dark-ink;
+  }
+
+  .card {
+    @apply rounded-xl2 border border-base-border bg-white shadow-sm dark:border-dark-border dark:bg-dark-section;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
