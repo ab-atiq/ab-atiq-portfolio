@@ -6,13 +6,14 @@
 
 export const profile = {
   name: "Abul Bashar Atiqur",
+  name_eng: "AB Atiq",
   eyebrow: "Software Engineer",
-  designation: "CS Instructor & Software Engineer",
+  designation: "Software Engineer & CS Instructor",
   tagline:
     "Building modern web experiences and solutions with a focus on clean code and user-centric design.",
   location: "Naogaon, Rajshahi, Bangladesh",
-  yearsExperience: "1",
-  available: true,
+  yearsExperience: "1.5",
+  available: false,
   avatar: "/images/Atiqur_Rahman_CS_instructor.jpg",
   resumeUrl: "/Atiqur_Rahman_Resume_final.pdf",
   bio: [
@@ -30,19 +31,19 @@ export const socials = [
     icon: "linkedin",
   },
   {
-    label: "Twitter",
-    href: "https://x.com/abulbasharatiq",
-    icon: "twitter",
-  },
-  {
     label: "Facebook",
     href: "https://www.facebook.com/abulbasbaratiq/",
     icon: "facebook",
   },
+  {
+    label: "Twitter",
+    href: "https://x.com/abulbasharatiq",
+    icon: "twitter",
+  },
 ];
 
 export const contact = {
-  email: "abulbasharatiqur@gmail.com",
+  email: "ab.atiq.engineer@gmail.com",
   phone: "+880 1521787417",
   whatsapp: "+880 1521787417",
 };
@@ -54,13 +55,25 @@ export type SkillCategory = {
 
 export const skills: SkillCategory[] = [
   {
+    category: "Programming Languages",
+    items: [
+      { name: "C/C++", level: 85 },
+      { name: "Python", level: 90 },
+      { name: "JavaScript", level: 85 },
+      { name: "TypeScript", level: 70 },
+      { name: "Java", level: 75 },
+    ],
+  },
+  {
     category: "Frontend",
     items: [
       { name: "HTML & CSS", level: 90 },
-      { name: "JavaScript", level: 85 },
       { name: "React", level: 85 },
       { name: "Next.js", level: 75 },
       { name: "Tailwind CSS", level: 88 },
+      { name: "Bootstrap", level: 80 },
+      { name: "Material UI", level: 75 },
+      { name: "Redux", level: 70 },
     ],
   },
   {
@@ -69,16 +82,31 @@ export const skills: SkillCategory[] = [
       { name: "Node.js", level: 78 },
       { name: "Express.js", level: 78 },
       { name: "MongoDB", level: 75 },
+      { name: "Mongoose", level: 70 },
+      { name: "MySQL", level: 70 },
+      { name: "PostgreSQL", level: 65 },
       { name: "REST APIs", level: 80 },
+      { name: "Docker", level: 60 },
+      { name: "Django", level: 65 },
+      { name: "FastAPI", level: 60 },
+      { name: "Django REST Framework", level: 65 },
+      { name: "Prisma", level: 60 },
     ],
   },
   {
     category: "Tools & Others",
     items: [
       { name: "Git & GitHub", level: 85 },
-      { name: "Figma", level: 65 },
       { name: "VS Code", level: 90 },
-      { name: "Postman", level: 80 },
+      { name: "Netlify", level: 85 },
+      { name: "Chrome DevTools", level: 80 },
+      { name: "Postman", level: 75 },
+      { name: "Jira", level: 70 },
+      { name: "Figma", level: 65 },
+      { name: "PhotoShop", level: 60 },
+      { name: "Illustrator", level: 60 },
+      { name: "Canva", level: 70 },
+      { name: "Premiere Pro", level: 60 },
     ],
   },
 ];
@@ -94,14 +122,14 @@ export const education: EducationItem[] = [
   {
     degree: "MSc in Computer Science & Engineering",
     institution: "Begum Rokeya University, Rangpur, Bangladesh",
-    duration: "2024 — present",
+    duration: "2025 — present",
     description:
       "Focused on web technologies, data structures, and software engineering practices. Built several academic and personal projects using the MERN stack.",
   },
   {
     degree: "B.Sc. in Computer Science & Engineering",
     institution: "Begum Rokeya University, Rangpur, Bangladesh",
-    duration: "2020 — 2024",
+    duration: "2020 — 2025",
     description:
       "Focused on web technologies, data structures, and software engineering practices. Built several academic and personal projects using the MERN stack.",
   },
@@ -128,18 +156,11 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Junior MERN Stack Developer",
-    company: "Company / Freelance",
-    duration: "2025 — Present",
+    role: "CS Instructor",
+    company: "Phitron Team (Programming Hero)",
+    duration: "December 2024 — Present",
     description:
-      "Building and maintaining full-stack web applications with React, Node.js, Express, and MongoDB. Collaborating with designers and clients to ship clean, responsive interfaces.",
-  },
-  {
-    role: "Business Operations",
-    company: "Previous Company",
-    duration: "2022 — 2024",
-    description:
-      "Handled day-to-day operations and problem-solving in a business environment before transitioning into software development — experience that now shapes how I approach product thinking.",
+      "Provide real-time support to students on programming concepts (C/C++, DSA, OOP, databases) through group forums and 1:1 sessions, and run a daily support session to clarify problem-solving approaches and debug code, maintaining a 100% student satisfaction rate. Deliver weekly conceptual sessions to 200+ students, breaking down complex problem-solving approaches and best practices for competitive programming and real-world applications, while collaborating with team members to resolve challenging programming problems and improve course materials.",
   },
 ];
 

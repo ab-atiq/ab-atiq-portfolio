@@ -1,6 +1,6 @@
 import { Github, Linkedin, Twitter, Facebook } from "lucide-react";
 import { profile, socials } from "@/data/site";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "../SectionHeading";
 
 const iconMap = {
   github: Github,

@@ -59,7 +59,7 @@ The easiest option is **Vercel** (made by the Next.js team, free tier available)
 1. Push this project to a GitHub repository.
 2. Go to https://vercel.com, sign in with GitHub, and click "New Project".
 3. Import your repository and click "Deploy" (no configuration needed).
-4. Vercel gives you a live URL like `https://my-portfolio.vercel.app`.
+4. Vercel gives you a live URL like `https://ab-atiq-engineer-portfolio.vercel.app`.
 
 Alternatively you can deploy to Netlify or any host that supports Next.js.
 

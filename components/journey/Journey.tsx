@@ -1,13 +1,18 @@
 import type { ElementType } from "react";
 import { GraduationCap, Briefcase } from "lucide-react";
 import { education, experience } from "@/data/site";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "../SectionHeading";
 
 function TimelineList({
   items,
   icon: Icon,
 }: {
-  items: { title: string; subtitle: string; duration: string; description?: string }[];
+  items: {
+    title: string;
+    subtitle: string;
+    duration: string;
+    description?: string;
+  }[];
   icon: ElementType;
 }) {
   return (
@@ -39,7 +44,10 @@ function TimelineList({
 
 export default function Journey() {
   return (
-    <section id="journey" className="bg-base-section py-20 dark:bg-dark-section sm:py-28">
+    <section
+      id="journey"
+      className="bg-base-section py-20 dark:bg-dark-section sm:py-28"
+    >
       <div className="container-page">
         <SectionHeading
           eyebrow="Journey"
@@ -47,23 +55,7 @@ export default function Journey() {
           description="The path that shaped how I think about building software."
         />
 
-        <div className="mt-14 grid gap-12 md:grid-cols-2">
-          <div>
-            <h3 className="mb-6 flex items-center gap-2 font-display text-xl font-bold">
-              <GraduationCap className="text-accent" size={22} />
-              Education
-            </h3>
-            <TimelineList
-              icon={GraduationCap}
-              items={education.map((e) => ({
-                title: e.degree,
-                subtitle: e.institution,
-                duration: e.duration,
-                description: e.description,
-              }))}
-            />
-          </div>
-
+        <div className="mt-14 grid gap-12 grid-cols-1">
           <div>
             <h3 className="mb-6 flex items-center gap-2 font-display text-xl font-bold">
               <Briefcase className="text-accent" size={22} />
@@ -74,6 +66,22 @@ export default function Journey() {
               items={experience.map((e) => ({
                 title: e.role,
                 subtitle: e.company,
+                duration: e.duration,
+                description: e.description,
+              }))}
+            />
+          </div>
+
+          <div>
+            <h3 className="mt-14 mb-6 flex items-center gap-2 font-display text-xl font-bold">
+              <GraduationCap className="text-accent" size={22} />
+              Education
+            </h3>
+            <TimelineList
+              icon={GraduationCap}
+              items={education.map((e) => ({
+                title: e.degree,
+                subtitle: e.institution,
                 duration: e.duration,
                 description: e.description,
               }))}

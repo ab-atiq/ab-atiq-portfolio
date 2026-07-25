@@ -6,11 +6,11 @@ export default function Footer() {
     <footer className="border-t border-base-border bg-white py-10 dark:border-dark-border dark:bg-dark-bg">
       <div className="container-page flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
         <Link href="/#home" className="font-display text-lg font-bold">
-          {profile.name.split(" ")[0]}
+          {profile.name_eng}
           <span className="text-accent">.dev</span>
         </Link>
 
-        <ul className="flex flex-wrap justify-center gap-5">
+        {/* <ul className="flex flex-wrap justify-center gap-5">
           {nav.map((item) => (
             <li key={item.href}>
               <Link
@@ -21,7 +21,7 @@ export default function Footer() {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         <p className="text-xs text-base-muted dark:text-dark-muted">
           © {new Date().getFullYear()} {profile.name}. All rights reserved.

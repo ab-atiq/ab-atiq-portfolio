@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { nav, profile } from "@/data/site";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Navbar() {
           className="font-display text-lg font-bold tracking-tight text-base-ink dark:text-dark-ink"
           onClick={() => setOpen(false)}
         >
-          {profile.name.split(" ")[0]}
+          {profile.name_eng}
           <span className="text-accent">.dev</span>
         </Link>
 

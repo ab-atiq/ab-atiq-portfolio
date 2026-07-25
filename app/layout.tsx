@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/context/ThemeProvider";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 import { profile } from "@/data/site";
 
 const display = Space_Grotesk({
@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className={`${display.variable} ${body.variable} antialiased`}>
         <ThemeProvider>
           <Navbar />
-          <main className="pt-16">{children}</main>
+          <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

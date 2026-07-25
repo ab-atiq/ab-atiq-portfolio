@@ -1,6 +1,6 @@
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { contact } from "@/data/site";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "../SectionHeading";
 
 export default function Contact() {
   const cards = [

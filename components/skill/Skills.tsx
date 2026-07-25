@@ -1,5 +1,5 @@
 import { skills } from "@/data/site";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "../SectionHeading";
 
 export default function Skills() {
   return (

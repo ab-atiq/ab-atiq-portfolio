@@ -75,7 +75,7 @@ export default function Hero() {
                 alt={profile.name}
                 fill
                 priority
-                className="object-cover grayscale"
+                className="object-cover"
               />
             </div>
 
@@ -92,13 +92,22 @@ export default function Hero() {
             </div>
 
             {/* Floating availability badge */}
-            {profile.available && (
+            {profile.available ? (
               <div
                 className="absolute -left-4 bottom-8 flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-base-ink shadow-lg animate-float-slow dark:bg-dark-section dark:text-dark-ink"
                 style={{ animationDelay: "1.2s" }}
               >
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
                 Available for work
+              </div>
+            ):(
+              <div
+                className="absolute -left-4 bottom-8 flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-base-ink shadow-lg animate-float-slow dark:bg-dark-section dark:text-dark-ink"
+                style={{ animationDelay: "1.2s" }}
+              >
+                <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                {/* Working as Software Engineer */}
+                Working as CS Instructor
               </div>
             )}
           </div>
