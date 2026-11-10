@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-base-border/80 bg-white/80 backdrop-blur-md dark:border-dark-border/80 dark:bg-dark-bg/80">
       <nav className="container-page flex h-16 items-center justify-between">
         <Link
-          href="/#home"
+          href="/"
           className="font-display text-lg font-bold tracking-tight text-base-ink dark:text-dark-ink"
           onClick={() => setOpen(false)}
         >
@@ -37,7 +37,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
-          <Link href="/#contact" className="btn-primary !px-5 !py-2.5 text-sm">
+          <Link href="/about-me#contact" className="btn-primary !px-5 !py-2.5 text-sm">
             Get in Touch
           </Link>
         </div>
@@ -73,7 +73,7 @@ export default function Navbar() {
             ))}
           </ul>
           <Link
-            href="/#contact"
+            href="/about-me#contact"
             onClick={() => setOpen(false)}
             className="btn-primary mt-4 w-full text-sm"
           >

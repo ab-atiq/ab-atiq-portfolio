@@ -1,6 +1,7 @@
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { contact } from "@/data/site";
 import SectionHeading from "../SectionHeading";
+import EmailForm from "./EmailForm";
 
 export default function Contact() {
   const cards = [
@@ -33,34 +34,51 @@ export default function Contact() {
           description="Have a project in mind, or just want to say hi? Reach out through any of the channels below."
         />
 
-        <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-3">
-          {cards.map((c) => (
-            <a
-              key={c.label}
-              href={c.href}
-              target={c.label === "WhatsApp" ? "_blank" : undefined}
-              rel={c.label === "WhatsApp" ? "noopener noreferrer" : undefined}
-              className="card flex flex-col items-center gap-3 p-6 text-center transition-transform hover:-translate-y-1"
-            >
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft text-accent-dark dark:bg-accent/15 dark:text-accent-pink">
-                <c.icon size={20} />
-              </span>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-base-muted dark:text-dark-muted">
-                  {c.label}
-                </p>
-                <p className="mt-1 break-all text-sm font-medium text-base-ink dark:text-dark-ink">
-                  {c.value}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
+        <div className="mx-auto mt-12 grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)] lg:items-start">
+          <div>
+            <h3 className="mb-4 font-display text-xl font-semibold">
+              Send me a message
+            </h3>
+            <EmailForm />
+          </div>
 
-        <div className="mt-10 text-center">
-          <a href={`mailto:${contact.email}`} className="btn-primary">
-            Say Hello <Mail size={16} />
-          </a>
+          <aside>
+            <h3 className="mb-4 font-display text-xl font-semibold">
+              Other ways to reach me
+            </h3>
+            <div className="space-y-4">
+              {cards.map((c) => (
+                <a
+                  key={c.label}
+                  href={c.href}
+                  target={c.label === "WhatsApp" ? "_blank" : undefined}
+                  rel={c.label === "WhatsApp" ? "noopener noreferrer" : undefined}
+                  className="card flex items-center gap-4 p-5 transition-transform hover:-translate-y-1"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent-dark dark:bg-accent/15 dark:text-accent-pink">
+                    <c.icon size={20} aria-hidden="true" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-xs font-semibold uppercase tracking-wide text-base-muted dark:text-dark-muted">
+                      {c.label}
+                    </span>
+                    <span className="mt-1 block break-all text-sm font-medium text-base-ink dark:text-dark-ink">
+                      {c.value}
+                    </span>
+                  </span>
+                </a>
+              ))}
+            </div>
+            <p className="mt-5 text-sm leading-relaxed text-base-muted dark:text-dark-muted">
+              Prefer a direct email?{" "}
+              <a
+                href={`mailto:${contact.email}`}
+                className="font-semibold text-accent hover:underline"
+              >
+                {contact.email}
+              </a>
+            </p>
+          </aside>
         </div>
       </div>
     </section>

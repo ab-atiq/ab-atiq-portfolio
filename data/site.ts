@@ -4,6 +4,15 @@
 // experience, contact) is pulled from here.
 // ─────────────────────────────────────────────────────────────
 
+export const nav = [
+  { label: "Home", href: "/#home" },
+  { label: "About Me", href: "/about-me" },
+  { label: "Journey", href: "/about-me#journey" },
+  { label: "Skills", href: "/about-me#skills" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/about-me#contact" },
+];
+
 export const profile = {
   name: "Abul Bashar Atiqur",
   name_eng: "AB Atiq",
@@ -162,13 +171,4 @@ export const experience: ExperienceItem[] = [
     description:
       "Provide real-time support to students on programming concepts (C/C++, DSA, OOP, databases) through group forums and 1:1 sessions, and run a daily support session to clarify problem-solving approaches and debug code, maintaining a 100% student satisfaction rate. Deliver weekly conceptual sessions to 200+ students, breaking down complex problem-solving approaches and best practices for competitive programming and real-world applications, while collaborating with team members to resolve challenging programming problems and improve course materials.",
   },
-];
-
-export const nav = [
-  { label: "Home", href: "/#home" },
-  { label: "About", href: "/#about" },
-  { label: "Journey", href: "/#journey" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Contact", href: "/#contact" },
 ];
