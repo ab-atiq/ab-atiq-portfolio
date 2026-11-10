@@ -66,13 +66,102 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "university-management-system",
+    name: "University Management System (UMS)",
+    image: "/images/UMS.png",
+    category: "web",
+    status: "live",
+    featured: true,
+    order: 1,
+    year: 2026, // TODO: confirm year
+    teamType: "solo", // TODO: change to "team" if this was a group project
+    role: "Frontend Developer",
+    tags: ["nextjs", "typescript", "erp", "education", "forms", "rbac"],
+    shortDescription:
+      "A role-based academic ERP for students, faculty, and admins, covering enrollment, attendance, grades, and payments.",
+    description:
+      "A role-based academic ERP frontend built with the Next.js App Router for students, faculty, and admins. Students can enroll under semester-gated rules and view degree curriculum and published results with transcripts. Faculty can mark attendance, manage exams, and enter grades. Admins can manage invoices and payments, where payment screens rely on backend-verified payment status and API errors are mapped into form validation.",
+    features: [
+      "Role-based views for students, faculty, and admins",
+      "Semester-gated enrollment",
+      "Degree curriculum views",
+      "Attendance marking",
+      "Exam management and grade entry",
+      "Published results and transcript views",
+      "Invoice and payment screens using backend-verified status",
+      "API error mapping into form validation",
+    ],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "TanStack Query",
+      "TanStack Form",
+      "Zod",
+    ],
+    links: {
+      frontendLive: "https://ph-l2-a7-ums-frontend.vercel.app/",
+      githubFrontend: "https://github.com/ab-atiq/PH-L2-A7-UMS-Frontend",
+      githubBackend: "https://github.com/ab-atiq/PH-L2-A7-UMS-Backend",
+    },
+    challenges:
+      "TODO: Describe the hardest problem, for example enforcing semester-gated enrollment on the client, or mapping backend validation errors onto form fields.",
+    improvements:
+      "TODO: Describe next steps, for example real-time attendance updates, a richer transcript export, or more test coverage for the grade entry flow.",
+  },
+  {
+    slug: "fixitnow",
+    name: "FixItNow (Service Booking Platform)",
+    image: "/images/FixItNow.png",
+    category: "web",
+    status: "live",
+    featured: true,
+    order: 2,
+    year: 2026, // TODO: confirm year
+    teamType: "solo", // TODO: change to "team" if this was a group project
+    role: "Full-Stack Developer",
+    tags: ["nextjs", "typescript", "stripe", "jwt", "booking", "rbac"],
+    shortDescription:
+      "A full-stack service booking platform where customers book technicians and pay securely via Stripe.",
+    description:
+      "A full-stack service booking platform where customers book technicians, manage bookings, and pay securely via Stripe. Includes role-based dashboards for customers, technicians, and admins, covering booking workflows, earnings tracking, and user moderation. Authentication uses JWT with protected routes, and API calls go through centralized Axios interceptors that log users out automatically when their token expires.",
+    features: [
+      "Customer booking of technicians and booking management",
+      "Secure payments via Stripe",
+      "Role-based dashboards for customers, technicians, and admins",
+      "Earnings tracking for technicians",
+      "User moderation for admins",
+      "JWT authentication with protected routes",
+      "Centralized Axios interceptors with automatic logout on token expiry",
+    ],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Stripe",
+      "Axios",
+      "Vercel",
+    ],
+    links: {
+      frontendLive: "https://fixitnow-frontend-pi.vercel.app/",
+      githubFrontend: "https://github.com/ab-atiq/FixItNow-frontend",
+      githubBackend:
+        "https://github.com/ab-atiq/PH_L2_A4_FixItNow_Backend_Project",
+    },
+    challenges:
+      "TODO: Describe the hardest problem, for example keeping payment status in sync with bookings, or handling token expiry cleanly across all API calls.",
+    improvements:
+      "TODO: Describe next steps, for example webhook-based payment confirmation, notifications for booking status changes, or technician ratings.",
+  },
+  {
     slug: "prostream",
     name: "ProStream (Streaming Site)",
     image: "/images/pro_stream.png",
     category: "web",
     status: "live",
     featured: true,
-    order: 1,
+    order: 3,
     year: 2025, // TODO: confirm year
     teamType: "team",
     role: "Frontend Developer & Payment Integration",
@@ -116,7 +205,7 @@ export const projects: Project[] = [
     category: "web",
     status: "live",
     featured: true,
-    order: 2,
+    order: 4,
     year: 2025, // TODO: confirm year
     teamType: "solo",
     role: "Full-Stack Developer",
@@ -142,95 +231,6 @@ export const projects: Project[] = [
       "Designing a clean data model with Prisma that supported issue statuses and ownership, while validating all incoming data with Zod, required careful planning to keep the API both type-safe and easy to extend.",
     improvements:
       "I'd like to add filtering and sorting on the issue list, email notifications for status changes, and role-based permissions for teams.",
-  },
-  {
-    slug: "fixitnow",
-    name: "FixItNow (Service Booking Platform)",
-    image: "/images/project-1.svg",
-    category: "web",
-    status: "live",
-    featured: true,
-    order: 3,
-    year: 2026, // TODO: confirm year
-    teamType: "solo", // TODO: change to "team" if this was a group project
-    role: "Full-Stack Developer",
-    tags: ["nextjs", "typescript", "stripe", "jwt", "booking", "rbac"],
-    shortDescription:
-      "A full-stack service booking platform where customers book technicians and pay securely via Stripe.",
-    description:
-      "A full-stack service booking platform where customers book technicians, manage bookings, and pay securely via Stripe. Includes role-based dashboards for customers, technicians, and admins, covering booking workflows, earnings tracking, and user moderation. Authentication uses JWT with protected routes, and API calls go through centralized Axios interceptors that log users out automatically when their token expires.",
-    features: [
-      "Customer booking of technicians and booking management",
-      "Secure payments via Stripe",
-      "Role-based dashboards for customers, technicians, and admins",
-      "Earnings tracking for technicians",
-      "User moderation for admins",
-      "JWT authentication with protected routes",
-      "Centralized Axios interceptors with automatic logout on token expiry",
-    ],
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Stripe",
-      "Axios",
-      "Vercel",
-    ],
-    links: {
-      frontendLive: "https://fixitnow-frontend-pi.vercel.app/",
-      githubFrontend: "https://github.com/ab-atiq/FixItNow-frontend",
-      githubBackend:
-        "https://github.com/ab-atiq/PH_L2_A4_FixItNow_Backend_Project",
-    },
-    challenges:
-      "TODO: Describe the hardest problem, for example keeping payment status in sync with bookings, or handling token expiry cleanly across all API calls.",
-    improvements:
-      "TODO: Describe next steps, for example webhook-based payment confirmation, notifications for booking status changes, or technician ratings.",
-  },
-  {
-    slug: "university-management-system",
-    name: "University Management System (UMS)",
-    image: "/images/project-2.svg",
-    category: "web",
-    status: "live",
-    featured: true,
-    order: 4,
-    year: 2026, // TODO: confirm year
-    teamType: "solo", // TODO: change to "team" if this was a group project
-    role: "Frontend Developer",
-    tags: ["nextjs", "typescript", "erp", "education", "forms", "rbac"],
-    shortDescription:
-      "A role-based academic ERP for students, faculty, and admins, covering enrollment, attendance, grades, and payments.",
-    description:
-      "A role-based academic ERP frontend built with the Next.js App Router for students, faculty, and admins. Students can enroll under semester-gated rules and view degree curriculum and published results with transcripts. Faculty can mark attendance, manage exams, and enter grades. Admins can manage invoices and payments, where payment screens rely on backend-verified payment status and API errors are mapped into form validation.",
-    features: [
-      "Role-based views for students, faculty, and admins",
-      "Semester-gated enrollment",
-      "Degree curriculum views",
-      "Attendance marking",
-      "Exam management and grade entry",
-      "Published results and transcript views",
-      "Invoice and payment screens using backend-verified status",
-      "API error mapping into form validation",
-    ],
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "TanStack Query",
-      "TanStack Form",
-      "Zod",
-    ],
-    links: {
-      frontendLive: "https://ph-l2-a7-ums-frontend.vercel.app/",
-      githubFrontend: "https://github.com/ab-atiq/PH-L2-A7-UMS-Frontend",
-      githubBackend: "https://github.com/ab-atiq/PH-L2-A7-UMS-Backend",
-    },
-    challenges:
-      "TODO: Describe the hardest problem, for example enforcing semester-gated enrollment on the client, or mapping backend validation errors onto form fields.",
-    improvements:
-      "TODO: Describe next steps, for example real-time attendance updates, a richer transcript export, or more test coverage for the grade entry flow.",
   },
   {
     slug: "easy-rent",
